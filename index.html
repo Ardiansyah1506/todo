@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Todo List</title>
     <style>
         /* Gaya CSS untuk item daftar tugas */
@@ -12,13 +14,28 @@
         }
     </style>
 </head>
-<body>
-    <h1>Todo List</h1>
-    <input type="text" id="task" placeholder="Tambahkan tugas baru">
-    <button onclick="addTask()">Tambahkan</button>
-    <div id="taskList"></div>
-    <div id="TaskDone"></div>
 
+<body>
+    <main class="container">
+        <h1>Todo List</h1>
+        <div class="addtodo">
+        <input type="text" id="task" placeholder="Tambahkan tugas baru">
+        <button onclick="addTask()">Tambahkan</button>
+    </div>
+        <div id="taskList">
+            <!-- <div class="task-item">
+                <p>Belajar Coding</p>
+                <div class="btn-icon">
+                   <button> <i class="fa-solid fa-trash"></i></button>
+                   <button> <i class="fa-solid fa-check"></i></button>
+                </div>
+            </div> -->
+        </div>
+        <div id="TaskDone">
+            <!-- <p></p> -->
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -10,9 +10,13 @@ function addTask() {
         // Buat elemen div
         var newDiv = document.createElement("div");
         newDiv.className = "task-item";
+        
+        // Buat elemen div
+        var btnicon = document.createElement("div");
+        btnicon.className = "btn-icon";
 
         // Buat elemen teks
-        var text = document.createElement("span");
+        var text = document.createElement("p");
         text.textContent = taskText;
 
         // Buat elemen tombol "check" dengan Font Awesome
@@ -29,10 +33,11 @@ function addTask() {
             removeTask(newDiv);
         };
 
+        btnicon.appendChild(checkbtn)
+        btnicon.appendChild(deletebtn)
         // Gabungkan elemen-elemen
         newDiv.appendChild(text);
-        newDiv.appendChild(checkbtn);
-        newDiv.appendChild(deletebtn);
+        newDiv.appendChild(btnicon);
 
         // Tambahkan elemen ke dalam daftar
         taskList.appendChild(newDiv);
