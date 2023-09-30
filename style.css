@@ -1,67 +1,144 @@
 *,html{
-    margin:0;
+    margin: 0;
     padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
+
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+    font-weight: 400;
+    background-color: azure;
     height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 50vw;
-    background-color: antiquewhite;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: aqua;
+    width: 40vw;
+    min-height: 70vh;
+    padding: 30px;
+    border-radius: 20px;
 }
 
-.addtodo{
-    display: flex;
-    gap: 1rem;
-}
 
 input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 3px solid #ccc;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-}
-
-
-input[type=text]:focus {
-  border: 3px solid #555;
-  border-radius: 20px;
-}
-
-.taskList{
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+  
+  
+  input[type=text]:focus {
+    border: 3px solid #555;
+    border-radius: 20px;
+  }
+.addtodo{
+    background-color: antiquewhite;
+    padding: 20px;
+    width: 35vw;
     display: flex;
-    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 20px;
+    box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
+}
+
+.addtodo button{
+    border: none;
+    background-color: rgb(230, 125, 125);
+    padding: 12px 25px;
+    border-radius: 10px;
+}
+
+.addtodo button:hover{
+    background-color: rgb(251, 221, 180);
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.task{
+
+    display: flex;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+#taskList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 35vw;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
 }
 
 .task-item{
     display: flex;
-    gap: 5rem;
-    background-color:aqua;
-  padding: 12px 20px;
-    border-radius: 10px;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: rgb(232, 157, 157);
+    padding: 8px;
+    border-radius: 20px;
+    width: 350px;
+    font-size: 0.8rem;
 }
+
+.task-item p{
+    margin-left: 5px;
+}
+
+
+
+#TaskDone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+    width: 35vw;
+    border-radius: 20px;
+    background-color: antiquewhite;
+   box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
+-webkit-box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
+}
+
 
 .btn-icon{
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-.btn-icon button{
-    border:none;
-    background-color: aqua;
+.btn-icon button .fa-trash:nth-child(1):hover{
+ color: red;
 }
+
+.btn-icon button .fa-check:nth-child(1):hover{
+ color: green;
+}
+
+.btn-icon button {
+    border:none;
+        background-color: rgb(232, 157, 157);
+        color:black;
+
+}
+
