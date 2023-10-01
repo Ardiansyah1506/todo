@@ -8,20 +8,27 @@
 
 body{
     font-weight: 400;
-    background-color: azure;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: rgb(232, 157, 157);
 }
 
+header{
+    background-color: antiquewhite;
+    width: 100vw;
+    text-transform: capitalize;
+    padding: 10px;
+    box-shadow: -1px 10px 5px 0px rgba(212,144,144,0.75);
+-webkit-box-shadow: -1px 10px 5px 0px rgba(212,144,144,0.75);
+-moz-box-shadow: -1px 10px 5px 0px rgba(212,144,144,0.75);
+}
 .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    background-color: aqua;
     width: 40vw;
     min-height: 70vh;
     padding: 30px;
@@ -29,7 +36,7 @@ body{
 }
 
 
-input[type=text] {
+input {
     padding: 12px 20px;
     box-sizing: border-box;
     border: 3px solid #ccc;
@@ -39,16 +46,31 @@ input[type=text] {
   }
   
   
-  input[type=text]:focus {
+  input:focus {
     border: 3px solid #555;
     border-radius: 20px;
   }
+h2{
+    align-self: center;
+    font-size: 1em;
+}
+
+h3{
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-left: 10px;
+}
+p{
+    font-size: 0.8em;
+}
+
 .addtodo{
     background-color: antiquewhite;
     padding: 20px;
     width: 35vw;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 1rem;
     border-radius: 20px;
     box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
@@ -56,11 +78,18 @@ input[type=text] {
     -moz-box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
 }
 
+.task-input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+}
 .addtodo button{
     border: none;
     background-color: rgb(230, 125, 125);
     padding: 12px 25px;
     border-radius: 10px;
+    width: 150px;
 }
 
 .addtodo button:hover{
@@ -83,6 +112,7 @@ input[type=text] {
     align-items: center;
     padding: 10px;
     width: 35vw;
+    gap:1rem;
     border-radius: 20px;
     background-color: antiquewhite;
     box-shadow: 3px 9px 98px -29px rgba(0,0,0,0.75);
@@ -96,7 +126,8 @@ input[type=text] {
     align-items: stretch;
     background-color: rgb(232, 157, 157);
     padding: 8px;
-    border-radius: 20px;
+    border-radius: 10px;
+    text-transform: capitalize;
     width: 350px;
     font-size: 0.8rem;
 }

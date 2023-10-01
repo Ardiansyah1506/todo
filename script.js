@@ -1,7 +1,9 @@
 function addTask() {
     // Ambil nilai dari input
     var taskInput = document.getElementById("task");
+    var dateinput = document.getElementById("date");
     var taskText = taskInput.value.trim();
+    var datevalue = dateinput.value  
 
     // Jika input tidak kosong, tambahkan tugas ke daftar
     if (taskText !== "") {
@@ -15,9 +17,18 @@ function addTask() {
         var btnicon = document.createElement("div");
         btnicon.className = "btn-icon";
 
+        var task = document.createElement("div");
+        task.className = "task-input";
         // Buat elemen teks (p)
-        var text = document.createElement("p");
+        var text = document.createElement("h3");
         text.textContent = taskText;
+
+        var date = document.createElement("p")
+        date.textContent = datevalue
+
+        task.appendChild(text)
+        task.appendChild(date)
+
 
         // Buat elemen tombol "check" dengan Font Awesome
         var checkbtn = document.createElement("button");
@@ -30,11 +41,11 @@ function addTask() {
             removeTask(newDiv);
         };
 
-        btnicon.appendChild(checkbtn);
         btnicon.appendChild(deletebtn);
+        btnicon.appendChild(checkbtn);
 
         // Gabungkan elemen-elemen
-        newDiv.appendChild(text);
+        newDiv.appendChild(task);
         newDiv.appendChild(btnicon);
 
         // Tambahkan elemen ke dalam daftar
@@ -42,6 +53,7 @@ function addTask() {
 
         // Reset input
         taskInput.value = "";
+        dateinput.value = "";
     } else {
         alert("Silakan masukkan nilai");
     }
@@ -51,10 +63,7 @@ function moveTaskToDone(taskElement) {
     var TaskDone = document.getElementById("TaskDone");
 
     // Hapus tombol "delete" jika ada
-    var deleteButton = taskElement.querySelector(".fa-trash");
-    if (deleteButton) {
-        deleteButton.remove();
-    }
+    
 
     // Hapus elemen tombol "check" jika ada
     var checkButton = taskElement.querySelector(".fa-check");
@@ -72,18 +81,12 @@ function moveTaskToDone(taskElement) {
         moveTaskBackToTaskList(taskElement);
     };
 
-    // Buat tombol "trash" di dalam TaskDone
-    var trashButton = document.createElement("button");
-    trashButton.innerHTML = "<i class='fa-solid fa-trash'></i>";
-    trashButton.onclick = function() {
-        removeTask(taskElement);
-    };
+
 
     // Perbarui elemen tombol "check" dengan tombol "undo"
     taskElement.querySelector(".btn-icon").appendChild(undoButton);
 
     // Tambahkan tombol "trash" ke elemen tombol "undo"
-    taskElement.querySelector(".btn-icon").appendChild(trashButton);
 }
 
 function moveTaskBackToTaskList(taskElement) {
@@ -107,15 +110,6 @@ function moveTaskBackToTaskList(taskElement) {
 
     // Tambahkan tombol "check" ke elemen tombol "icon"
     taskElement.querySelector(".btn-icon").appendChild(checkButton);
-}
-
-function removeTask(taskElement) {
-    var taskList = document.getElementById("taskList");
-    var TaskDone = document.getElementById("TaskDone");
-
-    // Hapus elemen task-item baik dari task-list maupun TaskDone
-    taskList.removeChild(taskElement);
-    TaskDone.removeChild(taskElement);
 }
 
 // Tambahkan event listener untuk tombol "check" pada elemen task-item di task-list

@@ -7,30 +7,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Todo List</title>
-    <style>
-        /* Gaya CSS untuk item daftar tugas */
-        .task-item {
-            margin: 10px;
-        }
-    </style>
+    
 </head>
 
 <body>
-    <main class="container">
+    <header>
+    <nav>
         <h1>Todo List</h1>
+    </nav>
+</header>
+    <main class="container">
         <div class="addtodo">
-        <input type="text" id="task" placeholder="Tambahkan tugas baru">
-        <button onclick="addTask()">Tambahkan</button>
-    </div>
-    <div class="task">
-        <div id="taskList">
-            <h2>Task List</h2>
+            <h2>Add Todo</h2>
+            <div class="task-input">
+                <label for="task-text">Tambahkan Tugas baru anda</label>
+                <input type="text" id="task" placeholder="Tambahkan tugas baru">
+            </div>
+            <div class="task-input">
+                <label for="task-text">Masukkan Tanggal Harus Selesai</label>
+                <input type="date" id="date" placeholder="Tambahkan tanggal">
+            </div>
+            <button onclick="addTask()">Tambahkan</button>
         </div>
-        <div id="TaskDone">
-           
-            <h2>Task Done</h2>
+        <div class="task">
+            <div id="taskList">
+                <h2>Task List</h2>
+            </div>
+            <div id="TaskDone">
+
+                <h2>Task Done</h2>
+            </div>
         </div>
-    </div>
     </main>
     <script src="script.js"></script>
 </body>
