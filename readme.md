@@ -10,7 +10,7 @@ Simple ToDo list created with JavaScript
 
 ### General Info
 
-This project is designed for a comprehensive understanding of web development fundamentals. It provides hands-on practice in applying basic concepts, including input, lists, interactivity, and layout, which aids in grasping the essentials of web development. Moreover, the ToDo List project facilitates experimentation with styling (CSS) and the use of JavaScript to control webpage behavior, helping to address fundamental issues and expand comprehension in web development.
+This project is designed for a comprehensive understanding of web development fundamentals. It provides hands-on practice in applying basic concepts, including input, lists, interactivity, and layout, which aids in grasping the essentials of web development. Moreover, the Todo project facilitates experimentation with styling (CSS) and the use of JavaScript to control webpage behavior, helping to address fundamental issues and expand comprehension in web development.
 
 ### Tech
 
